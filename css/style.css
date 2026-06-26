@@ -1894,7 +1894,7 @@ button {
 
 .brainrot-visual-container .showcase-image-container {
     width: 100%;
-    max-width: 900px;
+    max-width: 720px;
     border: 1px solid var(--border-color);
     background-color: var(--bg-secondary);
 }
