@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initLightbox();
     initContactForm();
+    initSecurityPreventions();
 });
 
 /**
@@ -321,5 +322,24 @@ function initContactForm() {
             statusDiv.classList.remove('hidden');
             console.error("FormSubmit Error:", error);
         });
+    });
+}
+
+/**
+ * 5. Security Preventions (Block image and file downloads)
+ */
+function initSecurityPreventions() {
+    // Prevent right-click on images, PDFs, and lightbox
+    document.addEventListener('contextmenu', (e) => {
+        if (e.target.tagName === 'IMG' || e.target.closest('a[href$=".pdf"]') || e.target.classList.contains('lightbox-content')) {
+            e.preventDefault();
+        }
+    });
+
+    // Prevent dragging images to copy them
+    document.addEventListener('dragstart', (e) => {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
     });
 }
