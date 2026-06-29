@@ -18,16 +18,26 @@ function initNavigation() {
     const hash = window.location.hash.replace('#', '');
     const validSections = ['home', 'ecommerce', 'cultural-heritage', 'social-carousel', 'yuka', 'brainrot', 'dorica', 'ai-engineering', 'contatti'];
     
-    if (hash && validSections.includes(hash)) {
-        navigateTo(hash);
+    // Parse query params if any (e.g. #contatti?success=true)
+    let cleanHash = hash;
+    if (hash.includes('?')) {
+        cleanHash = hash.split('?')[0];
+    }
+    
+    if (cleanHash && validSections.includes(cleanHash)) {
+        navigateTo(cleanHash);
     }
 
     // Handle back/forward browser navigation
     window.addEventListener('hashchange', () => {
         const currentHash = window.location.hash.replace('#', '');
-        if (currentHash && validSections.includes(currentHash)) {
-            navigateTo(currentHash, false); // false to avoid recursive hash updating
-        } else if (!currentHash) {
+        let cleanCurrentHash = currentHash;
+        if (currentHash.includes('?')) {
+            cleanCurrentHash = currentHash.split('?')[0];
+        }
+        if (cleanCurrentHash && validSections.includes(cleanCurrentHash)) {
+            navigateTo(cleanCurrentHash, false); // false to avoid recursive hash updating
+        } else if (!cleanCurrentHash) {
             navigateTo('home', false);
         }
     });
@@ -263,75 +273,51 @@ function initContactForm() {
     const spinner = document.getElementById('form-spinner');
     const statusDiv = document.getElementById('form-status');
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault(); // Prevent page refresh
+    // 1. Dynamically configure redirect URL based on current host environment (local vs production)
+    const nextInput = document.getElementById('form-next');
+    if (nextInput) {
+        nextInput.value = window.location.origin + window.location.pathname + '#contatti?success=true';
+    }
 
-        // 1. Show loading state
+    // 2. Validate email format on submit and allow natural form POST
+    form.addEventListener('submit', (e) => {
+        const emailInput = document.getElementById('form-email');
+        const email = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (!emailRegex.test(email)) {
+            e.preventDefault(); // Stop submission
+            statusDiv.textContent = "Per favore, inserisci un indirizzo email valido (es. nome@esempio.com) per consentirmi di risponderti.";
+            statusDiv.className = 'form-status error';
+            statusDiv.classList.remove('hidden');
+            return;
+        }
+
+        // Show sending state
         submitBtn.disabled = true;
         spinner.classList.remove('hidden');
         statusDiv.className = 'form-status hidden';
         statusDiv.textContent = '';
-
-        // Get form inputs
-        const name = document.getElementById('form-name').value;
-        const email = document.getElementById('form-email').value;
-        const subject = document.getElementById('form-subject').value;
-        const message = document.getElementById('form-message').value;
-
-        // 2. Real API Call to FormSubmit via AJAX
-        fetch("https://formsubmit.co/ajax/enry91m@gmail.com", {
-            method: "POST",
-            headers: { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-                name: name,
-                email: email,
-                _subject: subject,
-                message: message
-            })
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Errore nell'invio del modulo");
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Hide spinner and re-enable button
-            spinner.classList.add('hidden');
-            submitBtn.disabled = false;
-
-            // Show success message
-            statusDiv.textContent = `Grazie ${name}! Il tuo messaggio è stato inviato correttamente. Enrico ti risponderà all'indirizzo ${email} al più presto.`;
-            statusDiv.className = 'form-status success';
-            statusDiv.classList.remove('hidden');
-
-            // Reset Form Fields
-            form.reset();
-        })
-        .catch(error => {
-            // Hide spinner and re-enable button
-            spinner.classList.add('hidden');
-            submitBtn.disabled = false;
-
-            // Show error message (do NOT show confirmation if submission failed)
-            statusDiv.innerHTML = `Si è verificato un errore durante l'invio del messaggio. Ti invitiamo a riprovare più tardi o a scrivere direttamente a <a href="mailto:enry91m@gmail.com">enry91m@gmail.com</a>.`;
-            statusDiv.className = 'form-status error';
-            statusDiv.classList.remove('hidden');
-            console.error("FormSubmit Error:", error);
-        });
     });
+
+    // 3. Display success message if redirected back with success parameter
+    if (window.location.hash.includes('success=true')) {
+        statusDiv.textContent = "Grazie! Il tuo messaggio è stato inviato correttamente. Riceverai a breve una copia dell'invio nella tua casella di posta.";
+        statusDiv.className = 'form-status success';
+        statusDiv.classList.remove('hidden');
+        
+        // Clean up hash in address bar silently
+        history.replaceState(null, null, '#contatti');
+    }
 }
 
 /**
  * 5. Security Preventions (Block image and file downloads)
  */
 function initSecurityPreventions() {
-    // Prevent right-click on images, PDFs, and lightbox
+    // Prevent right-click globally except inside the footer
     document.addEventListener('contextmenu', (e) => {
-        if (e.target.tagName === 'IMG' || e.target.closest('a[href$=".pdf"]') || e.target.classList.contains('lightbox-content')) {
+        if (!e.target.closest('.footer')) {
             e.preventDefault();
         }
     });
