@@ -1490,7 +1490,7 @@ button {
 }
 
 .footer-disclaimer {
-    font-size: 0.725rem;
+    font-size: 0.65rem !important;
     color: hsl(215, 12%, 70%) !important;
     line-height: 1.5;
     margin-top: 0.75rem;
@@ -2062,6 +2062,10 @@ img {
     body, p, li {
         font-size: 0.9rem !important;
     }
+    
+    .footer-disclaimer {
+        font-size: 0.42rem !important;
+    }
 }
 
 /* SMALLER SCREEN TYPOGRAPHY (<=480px) */
@@ -2105,5 +2109,9 @@ img {
     
     body, p, li {
         font-size: 0.85rem !important;
+    }
+    
+    .footer-disclaimer {
+        font-size: 0.38rem !important;
     }
 }
