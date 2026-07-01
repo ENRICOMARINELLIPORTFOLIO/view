@@ -166,7 +166,7 @@ button {
 .logo {
     font-size: 1.5rem;
     letter-spacing: 0.1em;
-    background: linear-gradient(120deg, var(--pink) 0%, var(--purple) 15%, var(--indigo) 55%, var(--sky-blue) 85%, var(--pink) 100%);
+    background: linear-gradient(120deg, var(--purple) 0%, var(--indigo) 35%, var(--sky-blue) 70%, var(--pink) 100%);
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
