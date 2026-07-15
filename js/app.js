@@ -276,7 +276,8 @@ function initContactForm() {
     // 1. Dynamically configure redirect URL based on current host environment (local vs production)
     const nextInput = document.getElementById('form-next');
     if (nextInput) {
-        nextInput.value = window.location.origin + window.location.pathname + '#contatti?success=true';
+        const baseUrl = window.location.href.split('#')[0].split('?')[0];
+        nextInput.value = baseUrl + '?success=true#contatti';
     }
 
     // 2. Validate email format on submit and allow natural form POST
@@ -300,14 +301,22 @@ function initContactForm() {
         statusDiv.textContent = '';
     });
 
-    // 3. Display success message if redirected back with success parameter
-    if (window.location.hash.includes('success=true')) {
+    // 3. Display success message if redirected back with success parameter (either in query or hash)
+    const urlParams = new URLSearchParams(window.location.search);
+    const hasSuccessQuery = urlParams.get('success') === 'true';
+    const hasSuccessHash = window.location.hash.includes('success=true');
+
+    if (hasSuccessQuery || hasSuccessHash) {
         statusDiv.textContent = "Grazie! Il tuo messaggio è stato inviato correttamente. Riceverai a breve una copia dell'invio nella tua casella di posta.";
         statusDiv.className = 'form-status success';
         statusDiv.classList.remove('hidden');
         
-        // Clean up hash in address bar silently
-        history.replaceState(null, null, '#contatti');
+        // Force navigation to contatti section (covers cases where the mobile browser stripped the hash redirect)
+        navigateTo('contatti');
+        
+        // Clean up both query and hash in address bar silently
+        const cleanUrl = window.location.pathname + '#contatti';
+        history.replaceState(null, null, cleanUrl);
     }
 }
 
