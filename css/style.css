@@ -899,7 +899,6 @@ main {
     .swiss-nav,
     .swiss-nav-left,
     .swiss-nav-right,
-    .swiss-hero,
     .swiss-pillars,
     .cs-header-grid,
     .cs-three-cols,
@@ -909,12 +908,15 @@ main {
         grid-template-columns: 1fr;
     }
 
+    .swiss-hero {
+        grid-template-columns: 1fr 190px;
+    }
+
     .swiss-nav { position: static; }
 
     .swiss-nav-left,
     .swiss-brand,
     .nav-item-dropdown,
-    .swiss-hero-left,
     .swiss-pillar,
     .cs-header-left,
     .cs-step-col,
@@ -951,7 +953,10 @@ main {
         display: block;
     }
 
-    .swiss-hero-left,
+    .swiss-hero-left {
+        padding: 24px;
+    }
+
     .swiss-bio-block,
     .swiss-pillar,
     .cs-header-left,
@@ -971,13 +976,14 @@ main {
     }
 
     .swiss-hero-right {
-        justify-content: center;
-        padding: 20px;
+        padding: 0;
     }
 
     .swiss-photo {
-        width: 220px;
-        height: 290px;
+        width: 100%;
+        height: 100%;
+        min-height: 200px;
+        margin: 0;
     }
 
     .flipbook-iframe {
@@ -985,9 +991,23 @@ main {
     }
 }
 
-@media (max-width: 480px) {
-    .swiss-h1 { font-size: 2.6rem; }
-    .swiss-role { font-size: 1.35rem; }
+@media (max-width: 540px) {
+    .swiss-hero {
+        grid-template-columns: 1fr 125px;
+    }
+    .swiss-hero-left {
+        padding: 20px 16px;
+    }
+    .swiss-h1 {
+        font-size: clamp(1.85rem, 7vw, 2.5rem);
+    }
+    .swiss-role {
+        font-size: clamp(0.95rem, 3.6vw, 1.25rem);
+        margin-top: 6px;
+    }
+    .swiss-photo {
+        min-height: 150px;
+    }
     .page-title { font-size: 1.95rem; }
     .contact-h2 { font-size: 2.1rem; }
 }
