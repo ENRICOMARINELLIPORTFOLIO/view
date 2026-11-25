@@ -17,13 +17,13 @@ function initNavigation() {
     // Check if there is an active hash in the URL on load
     const hash = window.location.hash.replace('#', '');
     const validSections = ['home', 'ecommerce', 'cultural-heritage', 'social-carousel', 'yuka', 'brainrot', 'dorica', 'ai-engineering', 'contatti'];
-    
+
     // Parse query params if any (e.g. #contatti?success=true)
     let cleanHash = hash;
     if (hash.includes('?')) {
         cleanHash = hash.split('?')[0];
     }
-    
+
     if (cleanHash && validSections.includes(cleanHash)) {
         navigateTo(cleanHash);
     }
@@ -46,7 +46,7 @@ function initNavigation() {
 function navigateTo(pageId, updateHash = true) {
     const sectionId = 'page-' + pageId;
     const targetSection = document.getElementById(sectionId);
-    
+
     if (!targetSection) return;
 
     // 1. Hide all sections
@@ -105,7 +105,7 @@ function updateActiveNavLinks(pageId) {
     // Remove active styles from all links and dropdown parents
     const allLinks = document.querySelectorAll('.dropdown-link, #link-ai-engineering');
     allLinks.forEach(link => link.classList.remove('active-link'));
-    
+
     const allDropdowns = document.querySelectorAll('.nav-item-dropdown');
     allDropdowns.forEach(dropdown => {
         dropdown.classList.remove('active-indigo', 'active-purple', 'active-pink');
@@ -118,8 +118,8 @@ function updateActiveNavLinks(pageId) {
     }
 
     // 2. Find dropdown parent and add active class based on category
-    const ecommerceLinks = ['ecommerce', 'cultural-heritage', 'social-carousel'];
-    const researchLinks = ['yuka', 'brainrot', 'dorica'];
+    const ecommerceLinks = ['ecommerce', 'cultural-heritage'];
+    const researchLinks = ['yuka', 'brainrot', 'dorica', 'social-carousel'];
     const techLinks = ['ai-engineering'];
 
     if (ecommerceLinks.includes(pageId)) {
@@ -150,18 +150,18 @@ function initMobileMenu() {
     // Handle dropdown clicks on mobile devices (touch viewports)
     dropdowns.forEach(dropdown => {
         const trigger = dropdown.querySelector('.dropdown-trigger');
-        
+
         trigger.addEventListener('click', (e) => {
-            // Only toggle on mobile viewport
-            if (window.innerWidth <= 768) {
+            // Only toggle on mobile/tablet viewport
+            if (window.innerWidth <= 900) {
                 e.preventDefault();
                 e.stopPropagation();
 
                 const isAlreadyOpen = dropdown.classList.contains('open-dropdown');
-                
+
                 // Close other dropdowns
                 dropdowns.forEach(d => d.classList.remove('open-dropdown'));
-                
+
                 // Toggle current
                 if (!isAlreadyOpen) {
                     dropdown.classList.add('open-dropdown');
@@ -193,7 +193,7 @@ function initLightbox() {
     const modalImg = document.getElementById('lightbox-img');
     const captionText = document.getElementById('lightbox-caption');
     const closeBtn = document.getElementById('lightbox-close-btn');
-    
+
     if (!modal || !modalImg) return;
 
     const openLightbox = (src, alt) => {
@@ -246,7 +246,7 @@ function initLightbox() {
     if (closeBtn) {
         closeBtn.addEventListener('click', closeModal);
     }
-    
+
     // Close when clicking outside the image
     modal.addEventListener('click', (e) => {
         if (e.target === modal || e.target === closeBtn) {
@@ -285,7 +285,7 @@ function initContactForm() {
         const emailInput = document.getElementById('form-email');
         const email = emailInput.value.trim();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        
+
         if (!emailRegex.test(email)) {
             e.preventDefault(); // Stop submission
             statusDiv.textContent = "Per favore, inserisci un indirizzo email valido (es. nome@esempio.com) per consentirmi di risponderti.";
@@ -310,10 +310,10 @@ function initContactForm() {
         statusDiv.textContent = "Grazie! Il tuo messaggio è stato inviato correttamente. Riceverai a breve una copia dell'invio nella tua casella di posta.";
         statusDiv.className = 'form-status success';
         statusDiv.classList.remove('hidden');
-        
+
         // Force navigation to contatti section (covers cases where the mobile browser stripped the hash redirect)
         navigateTo('contatti');
-        
+
         // Clean up both query and hash in address bar silently
         const cleanUrl = window.location.pathname + '#contatti';
         history.replaceState(null, null, cleanUrl);
