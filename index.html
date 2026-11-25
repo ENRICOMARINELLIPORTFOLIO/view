@@ -3,448 +3,463 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enrico Marinelli | Communication & Digital Content Specialist</title>
+    <title>Enrico Marinelli | Digital Media Professional</title>
     <meta name="description" content="Portfolio professionale di Enrico Marinelli. Esperto in produzione visiva d'autore, ricerca digitale, etnografia e sistemi intelligenti AI.">
-    
+
     <!-- Open Graph for SEO -->
-    <meta property="og:title" content="Enrico Marinelli | Communication & Digital Content Specialist">
+    <meta property="og:title" content="Enrico Marinelli | Digital Media Professional">
     <meta property="og:description" content="Produzione visiva, ricerca strategica e integrazione di sistemi intelligenti.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/avatar.png">
+    <meta property="og:image" content="assets/avatar_stool.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Custom Style -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-theme text-theme min-h-screen flex flex-col antialiased">
+<body>
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="header-glass sticky-nav">
-        <div class="header-container">
-            <a href="#home" onclick="navigateTo('home')" class="logo font-narrow" id="nav-logo">
-                ENRICO MARINELLI
-            </a>
+<div class="swiss-wrap">
 
-            
-            <nav class="nav-links" id="main-nav">
-                <!-- Dropdown 1: Portfolio Visivo -->
-                <div class="nav-item-dropdown">
-                    <button class="dropdown-trigger flex-center" aria-haspopup="true">
-                        <span class="dot bg-indigo"></span>
-                        Portfolio Visivo
-                        <svg class="chevron" viewBox="0 0 24 24" width="16" height="16"><path d="M7 10l5 5 5-5H7z" fill="currentColor"/></svg>
-                    </button>
-                    <div class="dropdown-menu">
-                        <a href="#ecommerce" onclick="navigateTo('ecommerce')" class="dropdown-link" id="link-ecommerce">E-commerce</a>
-                        <a href="#cultural-heritage" onclick="navigateTo('cultural-heritage')" class="dropdown-link" id="link-cultural-heritage">Cultural Heritage</a>
-                        <a href="#social-carousel" onclick="navigateTo('social-carousel')" class="dropdown-link" id="link-social-carousel">Social Carousel</a>
-                    </div>
+    <!-- HEADER / SWISS NAVIGATION -->
+    <header class="swiss-nav header-glass">
+        <div class="swiss-nav-left">
+            <a href="#home" onclick="navigateTo('home'); return false;" class="swiss-brand" id="nav-logo">Portfolio</a>
+
+            <!-- Dropdown 1: Progetti Visual -->
+            <div class="nav-item-dropdown">
+                <button class="dropdown-trigger" aria-haspopup="true">
+                    <span class="sq-dot bg-indigo"></span>
+                    Progetti Visual
+                    <svg class="chevron" viewBox="0 0 24 24" width="14" height="14"><path d="M7 10l5 5 5-5H7z" fill="currentColor"/></svg>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="#ecommerce" onclick="navigateTo('ecommerce'); return false;" class="dropdown-link" id="link-ecommerce">E-commerce</a>
+                    <a href="#cultural-heritage" onclick="navigateTo('cultural-heritage'); return false;" class="dropdown-link" id="link-cultural-heritage">Cultural Heritage</a>
                 </div>
+            </div>
+        </div>
 
-                <!-- Dropdown 2: Communication Strategy -->
-                <div class="nav-item-dropdown">
-                    <button class="dropdown-trigger flex-center" aria-haspopup="true">
-                        <span class="dot bg-purple"></span>
-                        Communication Strategy
-                        <svg class="chevron" viewBox="0 0 24 24" width="16" height="16"><path d="M7 10l5 5 5-5H7z" fill="currentColor"/></svg>
-                    </button>
-                    <div class="dropdown-menu">
-                        <span class="dropdown-header">Research</span>
-                        <a href="#brainrot" onclick="navigateTo('brainrot')" class="dropdown-link" id="link-brainrot">Etnografia Digitale: #Italianbrainrot</a>
-                        <a href="#yuka" onclick="navigateTo('yuka')" class="dropdown-link" id="link-yuka">Mercato Digitale: Yuka</a>
-                        <span class="dropdown-header">Communication Strategy</span>
-                        <a href="#dorica" onclick="navigateTo('dorica')" class="dropdown-link" id="link-dorica">Dorica Port Services</a>
-                    </div>
+        <div class="swiss-nav-right" id="main-nav">
+            <!-- Dropdown 2: Communication Strategy -->
+            <div class="nav-item-dropdown">
+                <button class="dropdown-trigger" aria-haspopup="true">
+                    <span class="sq-dot bg-purple"></span>
+                    Communication Strategy
+                    <svg class="chevron" viewBox="0 0 24 24" width="14" height="14"><path d="M7 10l5 5 5-5H7z" fill="currentColor"/></svg>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="#brainrot" onclick="navigateTo('brainrot'); return false;" class="dropdown-link" id="link-brainrot">Etnografia Digitale: #Italianbrainrot</a>
+                    <a href="#yuka" onclick="navigateTo('yuka'); return false;" class="dropdown-link" id="link-yuka">Mercato Digitale: Yuka</a>
+                    <a href="#dorica" onclick="navigateTo('dorica'); return false;" class="dropdown-link" id="link-dorica">Dorica Port Services</a>
+                    <a href="#social-carousel" onclick="navigateTo('social-carousel'); return false;" class="dropdown-link" id="link-social-carousel">Social Carousel</a>
                 </div>
+            </div>
 
-                <!-- Direct Link: AI Engineering -->
-                <a href="#ai-engineering" onclick="navigateTo('ai-engineering')" class="dropdown-trigger flex-center" id="link-ai-engineering" style="text-decoration: none; gap: 0.5rem;">
-                    <span class="dot bg-pink"></span>
+            <!-- Direct Link: AI Engineering -->
+            <div class="nav-item-dropdown">
+                <a href="#ai-engineering" onclick="navigateTo('ai-engineering'); return false;" class="dropdown-trigger" id="link-ai-engineering">
+                    <span class="sq-dot bg-pink"></span>
                     AI Engineering
                 </a>
-
-
-            </nav>
+            </div>
         </div>
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="flex-grow">
-        
+    <main>
+
         <!-- SECTION: HOME -->
         <section id="page-home" class="page-section active">
-            <div class="hero-container">
-                <div class="hero-brand">
-                    <h1 class="font-narrow hero-title">Enrico Marinelli</h1>
-                    <p class="hero-subtitle-gradient">
-                        Communication & Digital Content Specialist
-                    </p>
+            <div class="swiss-hero">
+                <div class="swiss-hero-left">
+                    <h1 class="swiss-h1">Enrico<br>Marinelli</h1>
+                    <p class="swiss-role">Digital Media Professional</p>
                 </div>
-                <div class="hero-avatar-wrapper">
-                    <div class="avatar-gradient-ring">
-                        <img src="assets/avatar_stool.png" alt="Enrico Marinelli Portrait" class="avatar-img">
-                    </div>
+                <div class="swiss-hero-right">
+                    <img src="assets/avatar_stool.png" alt="Enrico Marinelli Portrait" class="swiss-photo">
                 </div>
             </div>
 
-            <div class="hero-bio-section">
-                <div class="hero-description text-muted">
-                    <h2 class="hero-section-subtitle">una ricerca costante</h2>
-                    <p>Il mio percorso non è una linea retta, ma un esercizio quotidiano di curiosità. Nel tempo ho imparato a osservare il mondo attraverso lenti diverse: dalla ricerca dell'estetica nel settore fashion, alla responsabilità storica insita nei beni culturali, fino all'analisi dei linguaggi digitali. La tecnologia non è un fine, ma un catalizzatore: uno strumento per ridurre la complessità e liberare spazio per l'intuizione. In ogni progetto porto questo approccio ibrido, capace di unire il rigore metodologico alla sensibilità necessaria per comprendere cosa si muove dall'altra parte dello schermo. Non mi limito a produrre contenuti efficaci. Aspiro a creare connessioni autentiche tra le storie e chi le osserva. In un ecosistema digitale che corre veloce, credo che la vera professionalità risieda nella capacità di reinventarsi, di continuare a imparare e, soprattutto, di rimettere al centro il valore umano. In questo spazio ho raccolto alcuni dei lavori che hanno scandito il mio percorso: una sintesi visiva e strategica di questa costante ricerca.</p>
+            <div class="swiss-bio-block">
+                <h2 class="swiss-bio-heading">Ascolto, metodo e contesto</h2>
+                <p class="swiss-bio-paragraph">
+                    Sono un professionista del mondo digitale con esperienza in diversi settori: dal <strong>cultural heritage</strong> al <strong>luxury &amp; design retail ed e-commerce</strong>, fino alla <strong>formazione sull'intelligenza artificiale</strong>. Ambiti in cui ho portato la mia passione e le mie competenze tecniche in costante aggiornamento. Ciò che guida il mio lavoro è l'ascolto delle persone e la comprensione del contesto, per sviluppare strategie su misura per ogni realtà.
+                </p>
+            </div>
+
+            <div class="swiss-pillars">
+                <div class="swiss-pillar p-ind" onclick="navigateTo('ecommerce')">
+                    <div class="swiss-pillar-num">01 / VISUAL</div>
+                    <h3 class="swiss-pillar-title">Progetti Visual</h3>
+                    <p class="swiss-pillar-desc">E-commerce e Cultural Heritage.</p>
+                </div>
+                <div class="swiss-pillar p-pur" onclick="navigateTo('yuka')">
+                    <div class="swiss-pillar-num">02 / STRATEGIA</div>
+                    <h3 class="swiss-pillar-title">Communication Strategy</h3>
+                    <p class="swiss-pillar-desc">Etnografia Digitale (#Italianbrainrot), Mercato Digitale (Yuka), Dorica Port Services e Social Carousel.</p>
+                </div>
+                <div class="swiss-pillar p-pnk" onclick="navigateTo('ai-engineering')">
+                    <div class="swiss-pillar-num">03 / AI</div>
+                    <h3 class="swiss-pillar-title">AI Engineering</h3>
+                    <p class="swiss-pillar-desc">Moodboard Photo Flow AI: sistema multi-agente testato sul lancio del profumo Zèfiro.</p>
                 </div>
             </div>
         </section>
 
         <!-- SECTION: E-COMMERCE -->
         <section id="page-ecommerce" class="page-section hidden">
-            <div class="section-header">
-                <span class="badge bg-indigo-light text-indigo">Portfolio Visivo</span>
-                <h2 class="font-narrow page-title">E-commerce</h2>
+            <div class="cs-header-grid">
+                <div class="cs-header-left">
+                    <span class="cat-tag tag-indigo">Progetti Visual</span>
+                    <h2 class="page-title">E-commerce</h2>
+                </div>
+                <div class="cs-header-meta">
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Anno</div><div class="cs-meta-v">2017 - 2026</div></div>
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Ambito</div><div class="cs-meta-v">Luxury &amp; Design Retail / Shooting &amp; Post-Produzione</div></div>
+                </div>
             </div>
-            
-            <div class="section-body-text">
-                <p>Dietro a un'immagine capace di costruire la percezione di un prodotto c'è molto più di un semplice scatto: ogni intervento sullo shooting e sul fotoritocco è pensato per eliminare ciò che distrae e valorizzare ciò che comunica qualità e desiderabilità. In questa sezione, i confronti tra "prima" e "dopo" mostrano il percorso che trasforma uno scatto grezzo in un'immagine pronta per la pubblicazione, evidenziando come luce, composizione e post-produzione creino uno strumento capace di influenzare la scelta.</p>
+            <div class="cs-three-cols">
+                <div class="cs-step-col s-ind">
+                    <div class="cs-step-num">01</div>
+                    <p class="cs-step-p">Dietro a un'immagine capace di costruire la percezione di un prodotto c'è molto più di un semplice scatto: ogni soggetto richiede di essere valorizzato eliminando ciò che distrae dall'essenziale.</p>
+                </div>
+                <div class="cs-step-col s-pur">
+                    <div class="cs-step-num">02</div>
+                    <p class="cs-step-p">Attraverso un intervento mirato sullo shooting e sul fotoritocco tecnico, luce, composizione e post-produzione vengono calibrati per comunicare al meglio qualità, dettagli e desiderabilità.</p>
+                </div>
+                <div class="cs-step-col s-pnk">
+                    <div class="cs-step-num">03</div>
+                    <p class="cs-step-p">I confronti tra "prima" e "dopo" mostrano il percorso che trasforma uno scatto grezzo in un'immagine pronta per la pubblicazione e-commerce, uno strumento visivo capace di influenzare la scelta.</p>
+                </div>
             </div>
-
-            <div class="flipbook-container">
+            <div class="media-cell">
                 <iframe src="https://heyzine.com/flip-book/da3ac138cb.html" class="flipbook-iframe" allowfullscreen></iframe>
             </div>
         </section>
 
         <!-- SECTION: CULTURAL HERITAGE -->
         <section id="page-cultural-heritage" class="page-section hidden">
-            <div class="section-header">
-                <span class="badge bg-indigo-light text-indigo">Portfolio Visivo</span>
-                <h2 class="font-narrow page-title">Cultural Heritage</h2>
+            <div class="cs-header-grid">
+                <div class="cs-header-left">
+                    <span class="cat-tag tag-indigo">Progetti Visual</span>
+                    <h2 class="page-title">Cultural Heritage</h2>
+                </div>
+                <div class="cs-header-meta">
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Anno</div><div class="cs-meta-v">2019 - 2025</div></div>
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Ambito</div><div class="cs-meta-v">Beni Culturali / Digitalizzazione Conservativa</div></div>
+                </div>
             </div>
-
-            <div class="section-body-text">
-                <p>Documentare e digitalizzare un'opera significa raccontarne la storia e renderla accessibile senza comprometterne l'autenticità. La fotografia per il restauro e la digitalizzazione conservativa accompagnano ogni fase dell'intervento e della tutela: dalla catalogazione e rilievo delle superfici, alla riproduzione fedele di documenti, opere e materiali d'archivio. Attraverso un'acquisizione rigorosa, il controllo cromatico e la post-produzione conservativa, l'immagine diventa uno strumento di comunicazione tecnica e scientifica che amplia le possibilità di ricerca, conservazione e valorizzazione del patrimonio culturale.</p>
+            <div class="cs-three-cols">
+                <div class="cs-step-col s-ind">
+                    <div class="cs-step-num">01</div>
+                    <p class="cs-step-p">Documentare e digitalizzare un'opera significa raccontarne la storia e renderla accessibile nel tempo, accompagnando ogni fase dell'intervento e della tutela senza comprometterne l'autenticità.</p>
+                </div>
+                <div class="cs-step-col s-pur">
+                    <div class="cs-step-num">02</div>
+                    <p class="cs-step-p">La fotografia per il restauro e la digitalizzazione conservativa procedono attraverso catalogazione, rilievo delle superfici, acquisizione rigorosa, controllo cromatico e post-produzione conservativa su opere e materiali d'archivio.</p>
+                </div>
+                <div class="cs-step-col s-pnk">
+                    <div class="cs-step-num">03</div>
+                    <p class="cs-step-p">L'immagine diventa uno strumento di comunicazione tecnica e scientifica ad alta fedeltà, ampliando le possibilità di ricerca, conservazione e valorizzazione del patrimonio culturale.</p>
+                </div>
             </div>
-
-            <div class="flipbook-container">
+            <div class="media-cell">
                 <iframe src="https://heyzine.com/flip-book/543db2d2f3.html" class="flipbook-iframe" allowfullscreen></iframe>
             </div>
         </section>
 
-        <!-- SECTION: RICERCA VISIVA -->
         <!-- SECTION: SOCIAL CAROUSEL -->
         <section id="page-social-carousel" class="page-section hidden">
-            <div class="section-header">
-                <span class="badge bg-indigo-light text-indigo">Portfolio Visivo</span>
-                <h2 class="font-narrow page-title">Social Carousel</h2>
+            <div class="cs-header-grid">
+                <div class="cs-header-left">
+                    <span class="cat-tag tag-purple">Communication Strategy</span>
+                    <h2 class="page-title">Social Carousel</h2>
+                </div>
+                <div class="cs-header-meta">
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Anno</div><div class="cs-meta-v">2025 - 2026</div></div>
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Ambito</div><div class="cs-meta-v">Social Media Content Design / Sostenibilità</div></div>
+                </div>
             </div>
-
-            <div class="section-body-text">
-                <p>I social carousel nascono dall'incontro tra contenuto e progettazione visiva, trasformando temi complessi in percorsi di lettura chiari e immediati.</p>
-                <p>Questa sezione raccoglie le grafiche realizzate per una rubrica dedicata a sostenibilità e ambiente per accompagnare articoli e contenuti di divulgazione, mostrando come design, gerarchia delle informazioni e sintesi possano lavorare insieme per rendere accessibili argomenti articolati. Ogni carosello rappresenta un esercizio di comunicazione: selezionare ciò che conta, eliminare il superfluo e guidare il lettore verso una comprensione più rapida e consapevole.</p>
+            <div class="cs-three-cols">
+                <div class="cs-step-col s-ind">
+                    <div class="cs-step-num">01</div>
+                    <p class="cs-step-p">I social carousel nascono dall'esigenza di trasformare temi complessi legati a sostenibilità e ambiente in percorsi di lettura chiari e immediati per accompagnare articoli di divulgazione.</p>
+                </div>
+                <div class="cs-step-col s-pur">
+                    <div class="cs-step-num">02</div>
+                    <p class="cs-step-p">Ogni carosello è un esercizio di progettazione visiva e sintesi comunicativa: selezionare ciò che conta, eliminare il superfluo e organizzare la gerarchia delle informazioni in sequenze ordinate.</p>
+                </div>
+                <div class="cs-step-col s-pnk">
+                    <div class="cs-step-num">03</div>
+                    <p class="cs-step-p">Una serie di grafiche editoriali che guidano il lettore attraverso argomenti articolati verso una comprensione più rapida, visiva e consapevole dei contenuti divulgativi.</p>
+                </div>
             </div>
-
-            <div class="flipbook-container">
+            <div class="media-cell">
                 <iframe src="https://heyzine.com/flip-book/f32c040776.html" class="flipbook-iframe" allowfullscreen></iframe>
             </div>
         </section>
 
         <!-- SECTION: YUKA -->
         <section id="page-yuka" class="page-section hidden">
-            <div class="section-header">
-                <span class="badge bg-purple-light text-purple">Communication Strategy</span>
-                <h2 class="font-narrow page-title" style="font-size: 2.6rem; line-height: 1.15; text-transform: uppercase;">
-                    Strategie di Comunicazione nel Mercato Digitale<br>
-                    <span style="font-size: 0.75em; font-weight: 600; opacity: 0.8; text-transform: none; display: block; margin-top: 0.5rem;">Il Caso Yuka attraverso la lente Semiotica</span>
-                </h2>
-                <div class="article-meta" style="margin-top: 1.5rem;">
-                    <span><strong>Anno:</strong> 2024 - 2025</span>
-                    <span><strong>Ambito:</strong> Mercato Digitale / UX Design / Strategie di Comunicazione</span>
+            <div class="cs-header-grid">
+                <div class="cs-header-left">
+                    <span class="cat-tag tag-purple">Communication Strategy</span>
+                    <h2 class="page-title">Strategie di Comunicazione nel Mercato Digitale</h2>
+                    <p class="page-subtitle">Il Caso Yuka attraverso la lente Semiotica</p>
+                </div>
+                <div class="cs-header-meta">
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Anno</div><div class="cs-meta-v">2024 - 2025</div></div>
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Ambito</div><div class="cs-meta-v">Mercato Digitale / UX Design / Strategie di Comunicazione</div></div>
                 </div>
             </div>
 
-            <div class="yuka-layout-container">
-                <div class="yuka-text-col">
-                    <p>Oggi Yuka è utilizzata da oltre 80 milioni di persone in tutto il mondo. Ma come può una semplice app di food ranking trasformarsi in un fenomeno globale? La risposta risiede nello spazio culturale che intercetta: una crescente domanda di consapevolezza alimentare, salute e trasparenza, radicata nel tessuto sociale contemporaneo. Questo progetto analizza Yuka a partire dal contesto culturale in cui si è inserita, fino ad arrivare alle scelte progettuali della sua interfaccia.</p>
-                    <p>Attraverso l’analisi dell’esperienza utente e l’evoluzione delle sensibilità collettive verso il cibo e il benessere, lo studio evidenzia come ogni scelta di design contribuisca a generare fiducia, semplicità e immediatezza. Il successo di un prodotto digitale si rivela così strettamente legato alla sua capacità di decodificare e interpretare profondi bisogni culturali. La ricerca si è mossa lungo un approccio socio-culturale guidato da una lente semiotica, che ha permesso di sviscerare in profondità i meccanismi comunicativi e i codici visivi alla base dell'applicazione, integrando interviste qualitative in profondità ed osservazioni sul campo durante la spesa reale.</p>
-                    
-                    <div class="yuka-btn-wrapper">
-                        <a href="assets/yuka_ricerca.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; font-size: 0.9rem; border-radius: 8px;">
-                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                            <span>Leggi la ricerca completa (PDF)</span>
-                        </a>
-                    </div>
+            <div class="cs-three-cols">
+                <div class="cs-step-col s-ind">
+                    <div class="cs-step-num">01</div>
+                    <p class="cs-step-p">Nel 2024 oltre 80 milioni di persone usavano Yuka. La ricerca indaga come una semplice app di food ranking si sia trasformata in un fenomeno digitale globale, intercettando l'evoluzione del rapporto con il cibo verso salute e trasparenza.</p>
                 </div>
+                <div class="cs-step-col s-pur">
+                    <div class="cs-step-num">02</div>
+                    <p class="cs-step-p">Analisi socio-culturale e semiotica dell'interfaccia e del brand: profilazione del target (Modello di Schütz), decostruzione del marchio, semisimbolismo cromatico e spaziale, tono di voce, schema narrativo di Greimas e posizionamento competitivo.</p>
+                </div>
+                <div class="cs-step-col s-pnk">
+                    <div class="cs-step-num">03</div>
+                    <p class="cs-step-p">L'analisi ha evidenziato come una user interface semplificata migliori la user experience, rispondendo alla domanda culturale di un pubblico non esperto nel decifrare valori nutrizionali degli alimenti e composizione chimica dei cosmetici.</p>
+                </div>
+            </div>
 
-                <div class="yuka-visual-col">
-                    <div class="showcase-image-container">
-                        <img src="assets/case_yuka.jpg" alt="Yuka: La Semiotica della Salute in un Click" class="lightbox-trigger" loading="lazy" style="width: 100%; height: auto; display: block; transition: var(--transition-smooth);">
-                        <div class="zoom-hint">Clicca per ingrandire</div>
-                    </div>
+            <div class="media-cell">
+                <div class="showcase-image-container" style="max-width: 960px; margin: 0 auto 24px;">
+                    <img src="assets/case_yuka.jpg" alt="Yuka: La Semiotica della Salute in un Click" class="lightbox-trigger" loading="lazy">
+                    <div class="zoom-hint">Clicca per ingrandire</div>
+                </div>
+                <div style="text-align: center;">
+                    <a href="assets/yuka_ricerca.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                        Leggi la ricerca completa (PDF) &rarr;
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- SECTION: BRAINROT -->
         <section id="page-brainrot" class="page-section hidden">
-            <div class="section-header">
-                <span class="badge bg-purple-light text-purple">Communication Strategy</span>
-                <h2 class="font-narrow page-title">Il Fenomeno TikTok #Italianbrainrot</h2>
-                <div class="article-meta" style="margin-top: 1.5rem;">
-                    <span><strong>Anno:</strong> 2025 - 2026</span>
-                    <span><strong>Ambito:</strong> Media Studies / Digital Community Culture</span>
+            <div class="cs-header-grid">
+                <div class="cs-header-left">
+                    <span class="cat-tag tag-purple">Communication Strategy</span>
+                    <h2 class="page-title">Il Fenomeno TikTok #Italianbrainrot</h2>
+                </div>
+                <div class="cs-header-meta">
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Anno</div><div class="cs-meta-v">2025 - 2026</div></div>
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Ambito</div><div class="cs-meta-v">Media Studies / Digital Community Culture</div></div>
                 </div>
             </div>
 
-            <div class="section-body-text" style="margin-bottom: 2rem;">
-                <p>I fenomeni virali raccontano molto più delle piattaforme su cui nascono. #Italianbrainrot è uno di questi casi. Questo fenomeno a un primo sguardo appare come una sterile sequenza di contenuti generati dall'intelligenza artificiale, spesso imperfetti, privi di logica coerente e accompagnati da un linguaggio memetico: un insieme di riferimenti, battute e codici condivisi che acquistano significato solo all'interno della community che li produce.</p>
-                <p>Eppure, proprio questo linguaggio apparentemente incomprensibile è riuscito a conquistare milioni di utenti, dando vita a un ecosistema che ha superato lo stesso TikTok, piattaforma sulla quale è nato e si è diffuso. Nel giro di pochi mesi il fenomeno si è trasformato in un mercato fisico e digitale fatto di merchandising, carte collezionabili, videogiochi, remix musicali e nuove opportunità commerciali.</p>
-                <p>Per comprendere questo fenomeno ho condotto una ricerca netnografica non partecipata di natura qualitativa e una network analysis, basate su un campionamento distribuito temporalmente a partire dall'esordio su TikTok fino a gennaio 2025, con l'obiettivo di comprendere come si è evoluto il fenomeno nel tempo, quale sentiment ha generato nella community e quali dinamiche di appartenenza emergono dall'analisi degli hashtag. La ricerca evidenzia come dietro un'apparente assenza di senso si nascondano codici culturali condivisi, processi identitari e dinamiche di mercato capaci di trasformare un semplice trend in un fenomeno sociale.</p>
+            <div class="cs-three-cols">
+                <div class="cs-step-col s-ind">
+                    <div class="cs-step-num">01</div>
+                    <p class="cs-step-p">Nato su TikTok, questo fenomeno è stato indagato per comprendere le nuove generazioni, i loro linguaggi e il rapporto con la tecnologia: contenuti AI imperfetti e memetici legati alla Generazione Alpha, trasformatisi in un mercato fisico e digitale.</p>
+                </div>
+                <div class="cs-step-col s-pur">
+                    <div class="cs-step-num">02</div>
+                    <p class="cs-step-p">Ricerca netnografica non partecipata (Lurker approach) su 50 video virali stratificati in 3 fasi cronologiche (Marzo 2025 – Gennaio 2026), combinando analisi qualitativa audiovisiva, sentiment analysis manuale e network analysis con Gephi.</p>
+                </div>
+                <div class="cs-step-col s-pnk">
+                    <div class="cs-step-num">03</div>
+                    <p class="cs-step-p">La ricerca analitica ha evidenziato come dietro un'apparente assenza di senso si nascondano codici culturali condivisi, dinamiche di gatekeeping tra Insider e Turisti, processi identitari generazionali e una funzione di "riposo cognitivo".</p>
+                </div>
             </div>
 
-            <!-- INFOGRAPHIC CONTAINER -->
-            <div class="brainrot-visual-container" style="margin-top: 1rem; margin-bottom: 2.5rem;">
-                <div class="showcase-image-container">
-                    <img src="assets/case_brainrot.jpg" alt="#ItalianBrainrot: Viaggio nel Caos Generazionale di TikTok" class="lightbox-trigger" loading="lazy" style="width: 100%; height: auto; display: block; transition: var(--transition-smooth);">
+            <div class="media-cell">
+                <div class="showcase-image-container" style="max-width: 960px; margin: 0 auto 24px;">
+                    <img src="assets/case_brainrot.jpg" alt="#ItalianBrainrot: Viaggio nel Caos Generazionale di TikTok" class="lightbox-trigger" loading="lazy">
                     <div class="zoom-hint">Clicca per ingrandire</div>
                 </div>
-            </div>
-
-            <div class="brainrot-btn-wrapper" style="text-align: center; margin-top: 1rem;">
-                <a href="assets/Italian_Brainrot.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.75rem 1.5rem; font-size: 0.9rem; border-radius: 8px;">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--purple);"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                    <span>Leggi la ricerca completa (PDF)</span>
-                </a>
+                <div style="text-align: center;">
+                    <a href="assets/Italian_Brainrot.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                        Leggi la ricerca completa (PDF) &rarr;
+                    </a>
+                </div>
             </div>
         </section>
 
         <!-- SECTION: DORICA -->
         <section id="page-dorica" class="page-section hidden">
-            <div class="section-header">
-                <span class="badge bg-purple-light text-purple">Communication Strategy</span>
-                <h2 class="font-narrow page-title" style="font-size: 2.6rem; line-height: 1.15; text-transform: uppercase;">
-                    Communication Strategy<br>
-                    <span style="font-size: 0.75em; font-weight: 600; opacity: 0.8; text-transform: none; display: block; margin-top: 0.5rem;">Dorica Port Services</span>
-                </h2>
-                <div class="article-meta" style="margin-top: 1rem;">
-                    <span><strong>Anno:</strong> 2026</span>
-                    <span><strong>Ruolo:</strong> Communication Strategist</span>
-                    <span><strong>Ambito:</strong> Media Planning / Marketing</span>
+            <div class="cs-header-grid">
+                <div class="cs-header-left">
+                    <span class="cat-tag tag-purple">Communication Strategy</span>
+                    <h2 class="page-title">Communication Strategy</h2>
+                    <p class="page-subtitle">Dorica Port Services</p>
+                </div>
+                <div class="cs-header-meta">
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Anno</div><div class="cs-meta-v">2026</div></div>
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Ruolo</div><div class="cs-meta-v">Communication Strategist</div></div>
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Ambito</div><div class="cs-meta-v">Media Planning / Marketing</div></div>
                 </div>
             </div>
 
-            <div class="section-body-text" style="margin-bottom: 2rem;">
-                <p>Una strategia di comunicazione efficace nasce dall'ascolto umano per valorizzare le potenzialità di un'impresa e per far incontrare l'identità di brand con i suoi obiettivi. Questo progetto presenta il percorso strategico di branding e posizionamento sviluppato per Dorica Port Services, un'azienda che opera all'interno del porto di Ancona fornendo servizi ai passeggeri e gestendo il deposito bagagli. Ogni scelta, dalla definizione del posizionamento all'articolazione dei contenuti, è stata progettata per tradurre competenze tecniche complesse in un messaggio chiaro, coerente e riconoscibile, capace di rafforzare la fiducia e consolidare il dialogo con tutti gli stakeholder dell'ambiente portuale. In particolare, la strategia si concentra sulle potenzialità di creare collegamenti per i passeggeri in attesa con le attrazioni locali, valorizzando così i tempi di attesa e il territorio.</p>
+            <div class="cs-three-cols">
+                <div class="cs-step-col s-ind">
+                    <div class="cs-step-num">01</div>
+                    <p class="cs-step-p">Dorica Port Services opera nel porto di Ancona gestendo servizi ai passeggeri e deposito bagagli in area doganale protetta. La sfida è tradurre vent'anni di esperienza in un messaggio chiaro, valorizzando l'attesa e il territorio anconetano.</p>
+                </div>
+                <div class="cs-step-col s-pur">
+                    <div class="cs-step-num">02</div>
+                    <p class="cs-step-p">Percorso di branding e posizionamento basato sull'ascolto: definizione della promessa di valore ("Trasformare l'attesa in esperienza"), analisi dei target principali (18-25 e 35-50 anni), mappatura di Touchpoint &amp; Journey e Tone of Voice.</p>
+                </div>
+                <div class="cs-step-col s-pnk">
+                    <div class="cs-step-num">03</div>
+                    <p class="cs-step-p">Strategia di comunicazione e media planning su 6 pilastri strategici, con allocazione budget (60% acquisizione tra Google Ads, Geofencing e Influencer Marketing; 40% fidelizzazione, CRM e canali proprietari), obiettivi SMART e KPI.</p>
+                </div>
             </div>
 
-            <!-- INFOGRAPHIC CONTAINER -->
-            <div class="dorica-visual-container" style="margin-top: 1rem; margin-bottom: 3.5rem;">
-                <div class="showcase-image-container">
-                    <img src="assets/Strategy - Dorica Port Service.jpg" alt="Dorica Port Services: Communication Strategy" class="lightbox-trigger" loading="lazy" style="width: 100%; height: auto; display: block; transition: var(--transition-smooth);">
+            <div class="media-cell">
+                <div class="showcase-image-container" style="max-width: 1000px; margin: 0 auto;">
+                    <img src="assets/Strategy - Dorica Port Service.jpg" alt="Dorica Port Services: Communication Strategy" class="lightbox-trigger" loading="lazy">
                     <div class="zoom-hint">Clicca per ingrandire</div>
                 </div>
             </div>
 
-            <div class="section-body-text" style="margin-bottom: 0;">
-                <h3 class="font-narrow" style="font-size: 1.4rem; text-transform: uppercase; margin-bottom: 2rem; color: var(--text-primary);">Elementi sviluppati per la strategia di comunicazione e media planning</h3>
-                
-                <div class="strategy-points-grid" style="margin: 0 0 2rem 0;">
-                    <!-- PILLASTRO 1 -->
-                    <div class="strategy-point-card">
-                        <h3 class="strategy-point-title">
-                            <span class="dot"></span>
-                            Identità, Vision & Mission
-                        </h3>
-                        <p class="strategy-point-text">
-                            Posizionamento valoriale e definizione della rotta strategica del brand
-                        </p>
-                    </div>
-
-                    <!-- PILLASTRO 2 -->
-                    <div class="strategy-point-card">
-                        <h3 class="strategy-point-title">
-                            <span class="dot"></span>
-                            Tone of Voice & Promessa
-                        </h3>
-                        <p class="strategy-point-text">
-                            Value Proposition distintiva e definizione del tono di voce: autorevole, accogliente e coinvolgente
-                        </p>
-                    </div>
-
-                    <!-- PILLASTRO 3 -->
-                    <div class="strategy-point-card">
-                        <h3 class="strategy-point-title">
-                            <span class="dot"></span>
-                            Target & Buyer Personas
-                        </h3>
-                        <p class="strategy-point-text">
-                            Segmentazione dettagliata del mercato, targeting e ideazione di buyer Personas
-                        </p>
-                    </div>
-
-                    <!-- PILLASTRO 4 -->
-                    <div class="strategy-point-card">
-                        <h3 class="strategy-point-title">
-                            <span class="dot"></span>
-                            Touchpoint & Journey
-                        </h3>
-                        <p class="strategy-point-text">
-                            Mappatura dei punti di contatto fisici/digitali dell'esperienza logistica dei passeggeri
-                        </p>
-                    </div>
-
-                    <!-- PILLASTRO 5 -->
-                    <div class="strategy-point-card">
-                        <h3 class="strategy-point-title">
-                            <span class="dot"></span>
-                            Obiettivi SMART & Budget
-                        </h3>
-                        <p class="strategy-point-text">
-                            Pianificazione e allocazione del budget media con KPI di monitoraggio da raggiungere
-                        </p>
-                    </div>
-
-                    <!-- PILLASTRO 6 -->
-                    <div class="strategy-point-card">
-                        <h3 class="strategy-point-title">
-                            <span class="dot"></span>
-                            Valorizzazione Territoriale
-                        </h3>
-                        <p class="strategy-point-text">
-                            Valorizzazione del legame con lo scalo portuale e l'indotto locale come valore aggiunto
-                        </p>
-                    </div>
+            <div class="dorica-pillars-title">Elementi sviluppati per la strategia di comunicazione e media planning</div>
+            <div class="dorica-grid">
+                <div class="dorica-card">
+                    <h3><span class="sq-dot bg-purple"></span> Identità, Vision &amp; Mission</h3>
+                    <p>Posizionamento valoriale e definizione della rotta strategica del brand</p>
+                </div>
+                <div class="dorica-card">
+                    <h3><span class="sq-dot bg-purple"></span> Tone of Voice &amp; Promessa</h3>
+                    <p>Value Proposition distintiva e definizione del tono di voce: autorevole, accogliente e coinvolgente</p>
+                </div>
+                <div class="dorica-card">
+                    <h3><span class="sq-dot bg-purple"></span> Target &amp; Buyer Personas</h3>
+                    <p>Segmentazione dettagliata del mercato, targeting e ideazione di buyer Personas</p>
+                </div>
+                <div class="dorica-card">
+                    <h3><span class="sq-dot bg-purple"></span> Touchpoint &amp; Journey</h3>
+                    <p>Mappatura dei punti di contatto fisici/digitali dell'esperienza logistica dei passeggeri</p>
+                </div>
+                <div class="dorica-card">
+                    <h3><span class="sq-dot bg-purple"></span> Obiettivi SMART &amp; Budget</h3>
+                    <p>Pianificazione e allocazione del budget media con KPI di monitoraggio da raggiungere</p>
+                </div>
+                <div class="dorica-card">
+                    <h3><span class="sq-dot bg-purple"></span> Valorizzazione Territoriale</h3>
+                    <p>Valorizzazione del legame con lo scalo portuale e l'indotto locale come valore aggiunto</p>
                 </div>
             </div>
         </section>
 
         <!-- SECTION: AI ENGINEERING -->
         <section id="page-ai-engineering" class="page-section hidden">
-            <div class="section-header">
-                <span class="badge bg-pink-light text-pink">AI Engineering</span>
-                <h2 class="font-narrow page-title">AI Engineering</h2>
-            </div>
-
-            <div class="section-body-text">
-                <p>La diffusione delle nuove tecnologie AI coinvolge ormai ogni ambito di applicazione. Ho quindi integrato le mie competenze in questo settore ideando una struttura ecosistemica, che ho successivamente sviluppato e testato con successo. Il sistema assiste l'operatore nella creazione e nello sviluppo dei contenuti, fino alla loro pubblicazione. Il nome con cui ho battezzato questo ecosistema agentico AI è <strong>Moodboard Photo Flow AI</strong>. Di seguito è possibile esplorare la sua struttura nel dettaglio e visualizzare i prodotti di un test.</p>
-            </div>
-
-            <!-- THE 4 AGENTS TIMELINE -->
-            <div class="agent-timeline">
-                <!-- AGENTE 1 -->
-                <div class="agent-card">
-                    <div class="agent-header">
-                        <div class="agent-number">1</div>
-                        <h3 class="agent-title">Agente 1: The Creative Account Director</h3>
-                    </div>
-                    <div class="agent-meta">
-                        <div class="agent-meta-item"><strong>Cosa fa:</strong> Crea strategie su misura, utilizza categorie semiotiche per creare strategie di comunicazione efficaci e ben strutturate.</div>
-                        <div class="agent-meta-item"><strong>Come agisce:</strong> Crea un moodboard verbale del progetto, stabilendo i colori, l'atmosfera e le linee guida estetiche del progetto. Scrive un articolo editoriale per comunicare al pubblico il progetto.</div>
-                    </div>
+            <div class="cs-header-grid">
+                <div class="cs-header-left">
+                    <span class="cat-tag tag-pink">AI Engineering</span>
+                    <h2 class="page-title">AI Engineering</h2>
+                    <p class="page-subtitle">Moodboard Photo Flow AI</p>
                 </div>
-
-                <!-- FRECCIA 1 -->
-                <div class="agent-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
-                </div>
-
-                <!-- AGENTE 2 -->
-                <div class="agent-card">
-                    <div class="agent-header">
-                        <div class="agent-number">2</div>
-                        <h3 class="agent-title">Agente 2: Visual Producer</h3>
-                    </div>
-                    <div class="agent-meta">
-                        <div class="agent-meta-item"><strong>Cosa fa:</strong> Crea le immagini e le fotografie</div>
-                        <div class="agent-meta-item"><strong>Come agisce:</strong> Genera gli scatti fotografici in coerenza alle linee guida fornite dall'Agente 1.</div>
-                    </div>
-                </div>
-
-                <!-- FRECCIA 2 -->
-                <div class="agent-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
-                </div>
-
-                <!-- AGENTE 3 -->
-                <div class="agent-card">
-                    <div class="agent-header">
-                        <div class="agent-number">3</div>
-                        <h3 class="agent-title">Agente 3: Cinematographer / Sound Designer</h3>
-                    </div>
-                    <div class="agent-meta">
-                        <div class="agent-meta-item"><strong>Cosa fa:</strong> Crea i video e la musica di sottofondo</div>
-                        <div class="agent-meta-item"><strong>Come agisce:</strong> Trasforma le foto statiche in brevi video animati e vi aggiunge una colonna sonora a tempo con le immagini.</div>
-                    </div>
-                </div>
-
-                <!-- FRECCIA 3 -->
-                <div class="agent-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
-                </div>
-
-                <!-- AGENTE 4 -->
-                <div class="agent-card">
-                    <div class="agent-header">
-                        <div class="agent-number">4</div>
-                        <h3 class="agent-title">Agente 4: The Web Architect</h3>
-                    </div>
-                    <div class="agent-meta">
-                        <div class="agent-meta-item"><strong>Cosa fa:</strong> Pubblica i contenuti generati in modo coerente alle linee guida del progetto.</div>
-                        <div class="agent-meta-item"><strong>Come agisce:</strong> Raccoglie l'articolo editoriale, le immagini, i contenuti audiovisivi e li sfrutta a pieno per una pubblicazione web interattiva pronta all'uso.</div>
-                    </div>
+                <div class="cs-header-meta">
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Anno</div><div class="cs-meta-v">2026</div></div>
+                    <div class="cs-meta-cell"><div class="cs-meta-k">Ambito</div><div class="cs-meta-v">Sistemi Multi-Agente AI / Workflow Creativi</div></div>
                 </div>
             </div>
 
-            <!-- INTERACTIVE DEMO (LANDING PAGE GEMINI) -->
-            <div class="section-body-text" style="margin-top: 3.5rem;">
-                <h3 class="font-narrow" style="font-size: 1.5rem; text-transform: uppercase; color: var(--text-primary);">Un Esempio Pratico: Zèfiro</h3>
-                <p>Di seguito è possibile esplorare l'output finale di un flusso, sotto forma di pubblicazione di una pagina web che raccoglie tutti i contenuti precedentemente creati.</p>
-                <p>L'oggetto di questo progetto, per il brand Armonie Eteree, è stato il lancio del nuovo profumo Zèfiro, ispirato allo scenario mediterraneo.</p>
+            <div class="cs-three-cols">
+                <div class="cs-step-col s-ind">
+                    <div class="cs-step-num">01</div>
+                    <p class="cs-step-p">Gli strumenti AI di ultima generazione ampliano le possibilità creative, contenendo gli impatti sui costi e sul coinvolgimento di più agenzie. In progetti di AI Engineering conta la padronanza del contesto, da cui nasce Moodboard Photo Flow AI.</p>
+                </div>
+                <div class="cs-step-col s-pur">
+                    <div class="cs-step-num">02</div>
+                    <p class="cs-step-p">Un ecosistema di 4 agenti AI cooperanti che assiste la creatività umana dalla pianificazione concettuale alla pubblicazione web: Account Director, Visual Producer, Cinematographer / Sound Designer e Web Architect.</p>
+                </div>
+                <div class="cs-step-col s-pnk">
+                    <div class="cs-step-num">03</div>
+                    <p class="cs-step-p">Sistema sviluppato e testato con successo fino alla pubblicazione di una landing page interattiva pronta all'uso, simulando il lancio del profumo mediterraneo Zèfiro per Armonie Eteree.</p>
+                </div>
             </div>
 
-            <div class="flipbook-container" style="margin-top: 2rem;">
-                <div class="flipbook-header">
-                    <a href="assets/ai-innovation/landig page GEMINI.html" target="_blank" rel="noopener noreferrer" class="btn-iframe-open">
-                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                        <span>Apri in un'altra scheda</span>
-                    </a>
+            <div class="agents-grid">
+                <div class="agent-cell">
+                    <div class="agent-num">Agente 01</div>
+                    <h3>The Creative Account Director</h3>
+                    <p><strong>Cosa fa:</strong> Crea strategie su misura, utilizza categorie semiotiche per creare strategie di comunicazione efficaci e ben strutturate.</p>
+                    <p><strong>Come agisce:</strong> Crea un moodboard verbale del progetto, stabilendo i colori, l'atmosfera e le linee guida estetiche del progetto. Scrive un articolo editoriale per comunicare al pubblico il progetto.</p>
                 </div>
+                <div class="agent-cell">
+                    <div class="agent-num">Agente 02</div>
+                    <h3>Visual Producer</h3>
+                    <p><strong>Cosa fa:</strong> Crea le immagini e le fotografie.</p>
+                    <p><strong>Come agisce:</strong> Genera gli scatti fotografici in coerenza alle linee guida fornite dall'Agente 1.</p>
+                </div>
+                <div class="agent-cell">
+                    <div class="agent-num">Agente 03</div>
+                    <h3>Cinematographer / Sound Designer</h3>
+                    <p><strong>Cosa fa:</strong> Crea i video e la musica di sottofondo.</p>
+                    <p><strong>Come agisce:</strong> Trasforma le foto statiche in brevi video animati e vi aggiunge una colonna sonora a tempo con le immagini.</p>
+                </div>
+                <div class="agent-cell">
+                    <div class="agent-num">Agente 04</div>
+                    <h3>The Web Architect</h3>
+                    <p><strong>Cosa fa:</strong> Pubblica i contenuti generati in modo coerente alle linee guida del progetto.</p>
+                    <p><strong>Come agisce:</strong> Raccoglie l'articolo editoriale, le immagini, i contenuti audiovisivi e li sfrutta a pieno per una pubblicazione web interattiva pronta all'uso.</p>
+                </div>
+            </div>
+
+            <div class="section-body-block">
+                <h3 class="font-narrow" style="font-size: 1.5rem; text-transform: uppercase; margin-bottom: 0.75rem;">Un Esempio Pratico: Zèfiro</h3>
+                <p>Di seguito è possibile esplorare l'output finale di un flusso, sotto forma di pubblicazione di una pagina web che raccoglie tutti i contenuti precedentemente creati. L'oggetto di questo progetto, per il brand Armonie Eteree, è stato il lancio del nuovo profumo Zèfiro, ispirato allo scenario mediterraneo.</p>
+                <a href="assets/ai-innovation/landig page GEMINI.html" target="_blank" rel="noopener noreferrer" class="btn-pdf" style="margin-top: 8px;">
+                    Apri in un'altra scheda &rarr;
+                </a>
+            </div>
+            <div class="media-cell">
                 <iframe src="assets/ai-innovation/landig page GEMINI.html" class="flipbook-iframe" allowfullscreen></iframe>
             </div>
         </section>
 
         <!-- SECTION: CONTATTI -->
         <section id="page-contatti" class="page-section hidden">
-            <div class="section-header text-center-mobile">
-                <span class="badge bg-indigo-light text-indigo">Idee in cantiere?</span>
-                <h2 class="font-narrow page-title">Parlami del tuo progetto</h2>
-                <p class="section-lead text-muted">Hai un progetto da sviluppare in collaborazione o vuoi richiedere una consulenza? Inviami un messaggio.</p>
-            </div>
+            <div class="contact-main-grid">
+                <div class="contact-left">
+                    <div>
+                        <span class="cat-tag tag-indigo">Contatti</span>
+                        <h2 class="contact-h2">Entriamo in contatto</h2>
+                        <p class="contact-lead">
+                            Se desideri avviare un confronto diretto, puoi inviare un messaggio tramite email o attraverso la compilazione del modulo.
+                        </p>
+                    </div>
+                    <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border-color); font-size: 0.9rem; color: var(--text-muted);">
+                        Recapito diretto: <a href="mailto:enry91m@gmail.com" style="color:var(--text-primary); font-weight:600; text-decoration:none;">enry91m@gmail.com</a>
+                    </div>
+                </div>
 
-            <div class="contact-container">
-                <div class="contact-form-wrapper">
-                    <form id="contact-form" class="contact-form" action="https://formsubmit.co/enry91m@gmail.com" method="POST">
-                        <!-- FormSubmit settings -->
+                <div class="contact-right">
+                    <h3 class="form-title">Invia un messaggio</h3>
+                    <p class="form-sub">Riceverai risposta al più presto.</p>
+                    <form id="contact-form" class="form-stack" action="https://formsubmit.co/enry91m@gmail.com" method="POST">
                         <input type="hidden" name="_next" id="form-next" value="">
                         <input type="hidden" name="_autoresponse" value="Grazie per avermi contattato! Ti confermo di aver ricevuto correttamente il tuo messaggio. Ti risponderò al più presto. Di seguito trovi una copia del messaggio inviato:">
-                        <div class="form-group">
+                        <div class="fg">
                             <label for="form-name">Nome</label>
                             <input type="text" id="form-name" name="name" required placeholder="Il tuo nome">
                         </div>
-                        <div class="form-group">
+                        <div class="fg">
                             <label for="form-email">Email</label>
                             <input type="email" id="form-email" name="email" required placeholder="nome@esempio.com">
                         </div>
-                        <div class="form-group">
+                        <div class="fg">
                             <label for="form-subject">Oggetto</label>
-                            <input type="text" id="form-subject" name="_subject" required placeholder="Come posso aiutarti?">
+                            <input type="text" id="form-subject" name="_subject" required placeholder="Motivo del contatto">
                         </div>
-                        <div class="form-group">
+                        <div class="fg">
                             <label for="form-message">Messaggio</label>
-                            <textarea id="form-message" name="message" rows="5" required placeholder="Descrivi brevemente il tuo progetto o richiesta..."></textarea>
+                            <textarea id="form-message" name="message" rows="5" required placeholder="Scrivi qui il tuo messaggio..."></textarea>
                         </div>
-                        <button type="submit" class="btn-submit" id="btn-submit-form">
-                            <span>Invia Messaggio</span>
+                        <button type="submit" class="btn-swiss-submit" id="btn-submit-form">
+                            <span>Invia Messaggio &rarr;</span>
                             <svg class="spinner hidden" id="form-spinner" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="32"/></svg>
                         </button>
                         <div id="form-status" class="form-status hidden"></div>
@@ -464,43 +479,22 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <!-- Dark band at the top of the footer for CTA -->
-        <div class="footer-top-band" id="footer-cta">
-            <a href="#contatti" onclick="navigateTo('contatti')" class="nav-link-btn footer-btn" id="link-parliamo-footer">
-                <span class="footer-btn-text">Idee in cantiere? Parlami del tuo progetto</span>
-                <span class="cta-arrows">
-                    <svg class="cta-arrow arrow-1" viewBox="0 0 24 24" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    <svg class="cta-arrow arrow-2" viewBox="0 0 24 24" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    <svg class="cta-arrow arrow-3" viewBox="0 0 24 24" width="18" height="18"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                </span>
-            </a>
+        <a href="#contatti" onclick="navigateTo('contatti'); return false;" class="swiss-footer-cta" id="footer-cta">
+            <span class="footer-cta-title">Contattami</span>
+            <span class="footer-cta-arrow">&rarr;</span>
+        </a>
+        <div class="swiss-footer-info">
+            <div>&copy; 2026 Enrico Marinelli. All rights reserved.</div>
+            <p class="swiss-footer-disclaimer">
+                Le immagini e i progetti presentati in questo portfolio sono di proprietà dei rispettivi aventi diritto o clienti e vengono mostrati esclusivamente a scopo illustrativo e di documentazione dell'attività professionale dell'autore. Ne è vietata qualsiasi riproduzione, copia o utilizzo non autorizzato, ai sensi della Legge 22 aprile 1941, n. 633 sul diritto d'autore. Ogni violazione o utilizzo non consentito sarà perseguibile legalmente.
+            </p>
         </div>
-        
-        <div class="footer-container">
-            <div class="footer-details">
-                <p class="footer-info text-muted">
-                    <span class="footer-location-wrapper">
-                        <svg class="footer-location-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        <span>Senigallia (AN)</span>
-                    </span>
-                    <span class="footer-email-wrapper">
-                        <svg class="footer-email-icon" viewBox="0 0 24 24" width="16" height="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        <a href="mailto:enry91m@gmail.com">enry91m@gmail.com</a>
-                    </span>
-                    <span class="footer-copyright-spacer">|</span>
-                    <span class="footer-copy">&copy; 2026 Enrico Marinelli. All rights reserved.</span>
-                </p>
-                <p class="footer-disclaimer text-muted">
-                    Le immagini e i progetti presentati in questo portfolio sono di proprietà dei rispettivi aventi diritto o clienti e vengono mostrati esclusivamente a scopo illustrativo e di documentazione dell'attività professionale dell'autore. Ne è vietata qualsiasi riproduzione, copia o utilizzo non autorizzato, ai sensi della Legge 22 aprile 1941, n. 633 sul diritto d'autore. Ogni violazione o utilizzo non consentito sarà perseguibile legalmente.
-                </p>
-            </div>
-        </div>
-        
-        <!-- Constantly moving colored gradient line moved to the very bottom -->
         <div class="moving-gradient-line"></div>
     </footer>
 
-    <!-- App Scripts -->
-    <script src="js/app.js"></script>
+</div>
+
+<!-- App Scripts -->
+<script src="js/app.js"></script>
 </body>
 </html>
